@@ -5,16 +5,23 @@ class Container1 extends Component {
     super(props)
 
     this.state = {
-      stateprop1: "My initial state"
+      stateprop1: "My initial state",
+      stateprop2: 5
     }
   }
 
   // Must use setstate when mutating state
   changeState = () => (
-    this.setState({
-      stateprop1: "New State currently"
+    this.setState((prevState, props) => ({
+      stateprop1: props.nickname
     })
-  )
+  ))
+
+  changeNoState = () => (
+    this.setState((prevState, props) => ({
+      stateprop2: prevState.stateprop2 + 1
+    })
+  ))
   render () {
     return (
       <div>
@@ -23,6 +30,8 @@ class Container1 extends Component {
         {this.state.stateprop1}
         <hr />
         <button onClick={() => this.changeState()}>Change State</button>
+        <hr />
+    <button onClick={() => this.changeNoState()}>Change No. State {this.state.stateprop2}</button>
       </div>
     )
   }

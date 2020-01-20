@@ -18,7 +18,7 @@ class App extends Component {
         </div>
         <hr />
         <Component1 name="zenj" age={25}/>
-        <Container1 nickname="G!"/>
+        <Container1 nickname="G!, to display after state change"/>
       </div>
     )
   }
