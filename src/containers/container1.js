@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Component1 from '../functional/component1';
 
 class Container1 extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class Container1 extends Component {
   // Must use setstate when mutating state
   changeState = () => (
     this.setState((prevState, props) => ({
-      stateprop1: props.nickname
+      stateprop1: props.nickname,
+      stateprop1: prevState.stateprop1 + " lol"
     })
   ))
 
@@ -22,6 +24,7 @@ class Container1 extends Component {
       stateprop2: prevState.stateprop2 + 1
     })
   ))
+
   render () {
     return (
       <div>
@@ -31,7 +34,9 @@ class Container1 extends Component {
         <hr />
         <button onClick={() => this.changeState()}>Change State</button>
         <hr />
-    <button onClick={() => this.changeNoState()}>Change No. State {this.state.stateprop2}</button>
+        <button onClick={() => this.changeNoState()}>Change No. State {this.state.stateprop2}</button>
+        <hr />
+        <Component1 name="zenj" prop1={this.state.stateprop2}/>
       </div>
     )
   }

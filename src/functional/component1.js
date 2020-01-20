@@ -4,7 +4,8 @@ const Component1 = props => (
   <div>
     {props.name}
    <span> is </span>
-    {props.age}
+    {props.prop1}
+    Years Old
   </div>
 );
 
