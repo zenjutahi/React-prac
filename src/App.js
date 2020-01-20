@@ -12,9 +12,11 @@ class App extends Component {
     return (
       <div className="App">
         <button>{name}</button>
+        <hr />
         <div style={style}>
           Style
         </div>
+        <hr />
         <Component1 name="zenj" age={25}/>
         <Container1 nickname="G!"/>
       </div>
