@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Component1 from './functional/component1'
 import "./App.css"
-import * as styles from "./styles"
+import { style } from "./styles"
 
 class App extends Component {
 
@@ -10,9 +11,10 @@ class App extends Component {
     return (
       <div className="App">
         <button>{name}</button>
-        <div style={styles.style}>
+        <div style={style}>
           Style
         </div>
+        <Component1 />
       </div>
     )
   }
