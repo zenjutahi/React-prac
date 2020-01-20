@@ -14,7 +14,7 @@ class App extends Component {
         <div style={style}>
           Style
         </div>
-        <Component1 />
+        <Component1 name="zenj" age={25}/>
       </div>
     )
   }
