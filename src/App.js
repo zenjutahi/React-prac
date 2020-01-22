@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Component1 from './functional/component1'
 import Container1 from './containers/container1'
+import Container2 from './containers/container2'
 import "./App.css"
 import { style } from "./styles"
 
@@ -17,14 +18,10 @@ class App extends Component {
           Style
         </div>
         <hr />
-        <Container1 nickname="G!, to display after state change"/>
+        <Container2 nickname="G!, to display after state change"/>
       </div>
     )
   }
 }
-
-const Appinstance = new App()
-
-console.log(Appinstance)
 
 export default App;
